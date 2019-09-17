@@ -1,0 +1,9 @@
+caso, total nodos, altura máxima, soma total
+casom3.txt, 1, 1, 33
+casom5.txt, 1, 1, 116
+casom7.txt, 141, 7, 28871
+casom9.txt, 1649, 9, 402264
+casom10.txt, 10179, 10, 2777841
+casom11.txt, 56032, 11, 16632623
+casom12.txt, 305008, 12, 98060765
+casom13.txt, 976719, 13, 338643877
