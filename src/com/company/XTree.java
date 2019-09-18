@@ -14,6 +14,7 @@ public class XTree {
     }
 
     public XTree(String n, ArrayList<String> lista) {
+        Main.setAddNumNodo();
         this.nodo = n;
         this.filhos = new XTree[Integer.parseInt(lista.get(0))];
         lista.remove(0);

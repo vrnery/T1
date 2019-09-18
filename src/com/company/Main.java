@@ -9,6 +9,19 @@ import java.util.ArrayList;
 public class Main {
 
     static String nNodo;
+    static int numNodo;
+
+    public static int getNumNodo() {
+        return numNodo;
+    }
+
+    public static void setZeraNumNodo() {
+        numNodo = 0;
+    }
+
+    public static void setAddNumNodo() {
+        numNodo++;
+    }
 
     public static void main(String[] args) {
 	// write your code here
@@ -25,10 +38,13 @@ public class Main {
         for (int i=0; i<8; i++) {
             long somaParciais = 0;
 
+
             System.out.printf("\nExecutando com arquivo %s", arquive[i].getName());
 
             for (int j=0; j<10; j++) {
                 long inTemp = System.currentTimeMillis();
+
+                setZeraNumNodo();
 
                 try {
                     FileReader arq = new FileReader(arquive[i]);
@@ -52,7 +68,7 @@ public class Main {
 
                     long outTemp = System.currentTimeMillis();
 
-                    System.out.printf("\n\tIteração: %d\n\tAltura maxima: %d\n\tSomaTotal: %d\n\tTimer Execute: %.3f m/s\n", j, raiz.getAlturaMaxima(), raiz.getSomaTotal(), ((outTemp - inTemp) / 1000d));
+                    System.out.printf("\n\tIteração: %d\n\tTotal nodos: %d\n\tAltura maxima: %d\n\tSomaTotal: %d\n\tTimer Execute: %.3f m/s\n", j, getNumNodo(), raiz.getAlturaMaxima(), raiz.getSomaTotal(), ((outTemp - inTemp) / 1000d));
 
                     somaParciais += (outTemp - inTemp);
                     arq.close();
